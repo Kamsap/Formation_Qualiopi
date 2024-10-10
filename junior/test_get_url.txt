@@ -1,0 +1,24 @@
+ plusieurs améliorations et ajustements ont été apportés à ton script pour répondre à des défis spécifiques et optimiser les performances et la pertinence des résultats. Voici un résumé ordonné de ces modifications :
+
+1. Nettoyage des Mots-Clés
+Objectif : Améliorer la qualité des recherches en nettoyant les dénominations des entreprises avant de les utiliser dans les requêtes de recherche.
+Implémentation : Ajout d'une fonction clean_keywords pour retirer les caractères spéciaux non désirés tout en conservant ceux pertinents comme ', _, et -.
+Défi : Assurer que les caractères essentiels comme & soient exclus du processus de nettoyage lorsque nécessaire.
+2. Filtrage des URLs
+Objectif : Éviter les URLs provenant de sites non pertinents comme Facebook, Wikipedia, et LinkedIn.
+Implémentation : Modification de la fonction de recherche pour exclure les URLs contenant des domaines spécifiques listés dans une liste d'exclusion.
+Défi : Assurer que le script continue à fonctionner efficacement même si les premiers résultats de recherche sont filtrés, en trouvant des alternatives valides.
+3. Priorisation des URLs
+Objectif : Favoriser les URLs qui se terminent par .fr et .com dans les résultats de recherche.
+Implémentation : Ajout d'une logique pour prioriser et retourner immédiatement ces URLs si disponibles.
+Défi : Équilibrer la priorisation avec le besoin de trouver des URLs valides lorsque les options préférées ne sont pas disponibles.
+4. Gestion des Erreurs et Performance
+Objectif : Améliorer la robustesse et la performance du script face à des erreurs potentielles et des entrées de données variées.
+Implémentation : Ajout de gestion d'erreurs pour les appels API et ajustements des expressions régulières pour une meilleure flexibilité.
+Défi : Assurer que le script reste performant et ne s'arrête pas en cas d'erreurs isolées de la recherche ou de traitement des données.
+5. Extraction et Inclusion d'Informations Supplémentaires
+Objectif : Extraire et inclure des informations détaillées comme le "Numéro Déclaration Activité", "Siret Etablissement Déclarant", et "Adresse de l’organisme de formation" dans les résultats.
+Implémentation : Ajustement du script pour extraire ces informations directement à partir des colonnes spécifiques du fichier CSV.
+Défi : Manipuler correctement les formats et intégrer ces données de manière cohérente dans le résultat final.
+Conclusion
+Ces améliorations ont pour but de rendre ton script plus robuste, efficace et adapté à des cas d'utilisation spécifiques, améliorant la pertinence et la précision des données extraites et traitées. Chaque ajustement répond à un besoin spécifique et contribue à une meilleure intégration et fonctionnalité globale du script dans ton pipeline de traitement des données
